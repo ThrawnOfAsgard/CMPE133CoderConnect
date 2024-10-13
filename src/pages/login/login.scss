@@ -1,0 +1,204 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Code Pro", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #1a1a20; 
+}
+
+.login {
+    display: flex; 
+    height: 100vh;
+
+    .sidebar {
+        position: fixed; 
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 85px; 
+        display: flex;
+        overflow-x: hidden;
+        flex-direction: column;
+        background: #2a3568;
+        padding: 25px 20px;
+        transition: all 0.4s ease;
+
+        &:hover {
+            width: 260px; // width on hover
+        }
+
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            overflow-x: hidden;
+
+            img {
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+            }
+
+            h2 {
+                color: #fffb19;
+                font-size: 1.25rem;
+                font-weight: 600;
+                white-space: nowrap;
+                margin-left: 10px;
+                overflow-x: hidden;
+                font-family: 'Source Code Pro', monospace;
+            }
+        }
+
+        .sidebar-links {
+            list-style: none;
+            margin-top: 20px;
+            height: 80%;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            h4 {
+                color: #fff;
+                font-weight: 500;
+                white-space: nowrap;
+                margin: 10px 0;
+                position: relative;
+                font-family: 'Source Code Pro', monospace;
+
+                span {
+                    opacity: 0;
+                }
+            }
+
+            &:hover h4 span {
+                opacity: 1;
+            }
+
+            li {
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 0 20px;
+                    color: #fff;
+                    font-weight: 500;
+                    white-space: nowrap;
+                    padding: 15px 10px;
+                    text-decoration: none;
+                    transition: 0.2s ease;
+                    font-family: 'Source Code Pro', monospace;
+
+                    &:hover {
+                        color: #d7dae9;
+                        background: #6e698f;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        margin-left: 85px; 
+        flex: 1; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+
+        .card {
+            width: 40%; 
+            display: flex; 
+            background-color: #3f509c; 
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            padding: 20px; 
+
+            .left {
+                flex: 1; 
+                background-color: #ebdf36; 
+                padding: 20px; 
+                display: flex;
+                flex-direction: column; 
+                align-items: center; 
+                color: rgb(51, 79, 204);
+                font-family: 'Source Code Pro', monospace;
+
+                h1 {
+                    font-size: 36px;
+                    line-height: 1.2;
+                    margin-bottom: 10px;
+                }
+
+                span {
+                    font-size: 12px;
+                    margin-bottom: 20px;
+                }
+
+                button {
+                    width: 60%;
+                    padding: 8px;
+                    border: 1px solid #ccc;
+                    background-color: #ffffff;
+                    color: #666;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+
+                    &:hover {
+                        background-color: #f0f0f0;
+                    }
+                }
+            }
+
+            .right {
+                flex: 1; 
+                padding: 20px; 
+                display: flex;
+                flex-direction: column; 
+                align-items: center; 
+                gap: 20px; 
+                font-family: 'Source Code Pro', monospace;
+
+                h1 {
+                    color: #ebdf36; 
+                }
+
+                form {
+                    display: flex;
+                    flex-direction: column; 
+                    width: 100%; 
+                    gap: 15px; 
+
+                    input {
+                        border: 1px solid rgb(95, 96, 110);
+                        padding: 10px; 
+                        border-radius: 3px; 
+                        transition: border-color 0.3s;
+
+                        &:focus {
+                            border-color: #888; 
+                        }
+                    }
+
+                    button {
+                        width: 60%; 
+                        padding: 8px;
+                        border: none;
+                        background-color: #8093bd; 
+                        color: white; 
+                        font-weight: bold;
+                        cursor: pointer;
+                        transition: background-color 0.3s;
+
+                        &:hover {
+                            background-color: #353153; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
